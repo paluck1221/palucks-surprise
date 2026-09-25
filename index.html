@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Boyfriend Day, Baby! 💕</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #9d4263;
+      background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 0),
+        linear-gradient(to right, rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+      background-size: 8px 8px, 100% 100%;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '✦\A ✦  ✦';
+      white-space: pre;
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 20px;
+      line-height: 14px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '★';
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Floating Background Items */
+    .bg-item {
+      position: fixed;
+      font-size: 28px;
+      animation: floatUp 10s infinite linear;
+      user-select: none;
+      z-index: 0;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(105vh) rotate(0deg) scale(0.8); opacity: 0; }
+      15% { opacity: 0.9; }
+      85% { opacity: 0.9; }
+      100% { transform: translateY(-12vh) rotate(360deg) scale(1.1); opacity: 0; }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
+      background: rgba(255, 248, 249, 0.96);
+      backdrop-filter: blur(10px);
+      border: 3.5px solid #ffb3c6;
+      border-radius: 30px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      padding: 30px 22px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step {
+      display: none;
+      animation: popIn 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.88) translateY(15px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #a8234a;
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Fredoka', sans-serif;
+      color: #bd2a57;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-family: 'Caveat', cursive;
+      color: #555;
+      margin-bottom: 18px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(135deg, #bd2a57, #e0527f);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(189, 42, 87, 0.35);
+      transition: all 0.25s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(189, 42, 87, 0.45);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #ff8da1, #ffa8ba);
+      color: #72122c;
+    }
+
+    .btn-back {
+      background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+      color: #475569;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sticker-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: #ffe3ec;
+      border: 2px dashed #ff8da1;
+      border-radius: 20px;
+      font-family: 'Fredoka', sans-serif;
+      color: #a8234a;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .love-btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      position: relative;
+      min-height: 75px;
+      align-items: center;
+    }
+
+    #no-btn {
+      position: absolute;
+      background: #888;
+      box-shadow: none;
+      transition: top 0.2s ease, left 0.2s ease;
+    }
+
+    .option-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .option-card {
+      border: 2px dashed #ff9ebb;
+      padding: 14px 10px;
+      border-radius: 18px;
+      cursor: pointer;
+      background: #fff;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-align: center;
+      position: relative;
+    }
+
+    .option-card .title {
+      font-family: 'Fredoka', sans-serif;
+      color: #bd2a57;
+      font-size: 16px;
+    }
+
+    .option-card .desc {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 13px;
+      color: #9c1d45;
+      line-height: 1.35;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      margin-top: 0;
+    }
+
+    .option-card.selected {
+      background: #ffeaf0;
+      border: 2.5px solid #bd2a57;
+      transform: scale(1.04);
+      box-shadow: 0 6px 14px rgba(189, 42, 87, 0.2);
+    }
+
+    .option-card.selected .desc {
+      max-height: 80px;
+      opacity: 1;
+      margin-top: 8px;
+    }
+
+    #catcher-game {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background: #fff0f4;
+      border: 2px dashed #ff8da1;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      touch-action: none;
+    }
+
+    #basket {
+      position: absolute;
+      bottom: 10px;
+      left: 42%;
+      font-size: 32px;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .falling-item {
+      position: absolute;
+      font-size: 26px;
+      top: 0;
+      user-select: none;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      width: 220px;
+      margin: 0 auto 15px auto;
+    }
+
+    .cell {
+      width: 68px;
+      height: 68px;
+      background: #fff0f4;
+      border: 2px solid #ffb3c6;
+      border-radius: 16px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .checklist {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .checklist label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      background: #fff0f4;
+      border: 1.5px solid #ffb3c6;
+      border-radius: 14px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-family: 'Caveat', cursive;
+      font-size: 19px;
+    }
+
+    .checklist input[type="checkbox"] {
+      accent-color: #bd2a57;
+      width: 18px;
+      height: 18px;
+    }
+
+    .checklist label.completed span {
+      text-decoration: line-through;
+      color: #a09096;
+    }
+
+    .reason-card {
+      border-radius: 22px;
+      padding: 24px 18px;
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(189, 42, 87, 0.15);
+      animation: cardPop 0.4s ease-out;
+      margin-bottom: 15px;
+      border: 3.5px dashed #ffffff;
+      color: #333;
+    }
+
+    @keyframes cardPop {
+      0% { opacity: 0; transform: scale(0.82) rotate(4deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    .reason-sticker {
+      font-size: 50px;
+      margin-bottom: 12px;
+      animation: wiggle 2s infinite ease-in-out;
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-6deg); }
+      50% { transform: rotate(6deg); }
+    }
+
+    .booth-card {
+      background: linear-gradient(135deg, #fff0f5 0%, #ffe3ec 100%);
+      border: 2.5px dashed #ff8da1;
+      border-radius: 24px;
+      padding: 20px 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 20px rgba(189, 42, 87, 0.12);
+    }
+
+    .love-meter-bar {
+      width: 100%;
+      height: 18px;
+      background: #ffd0dc;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 12px 0;
+      border: 2px solid #ff9ebb;
+    }
+
+    .love-meter-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      transition: width 0.3s ease;
+    }
+
+    /* ENVELOPE DESIGN */
+    .envelope-section {
+      position: relative;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0 15px 0;
+    }
+
+    .envelope-container {
+      position: relative;
+      width: 270px;
+      height: 165px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .envelope-container:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .envelope-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #d8577a;
+      border-radius: 12px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .envelope-paper-preview {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: 240px;
+      height: 135px;
+      background: #ffffff;
+      border: 2px dashed #e0527f;
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .letter-preview-text {
+      font-family: 'Caveat', cursive;
+      color: #bd2a57;
+      font-size: 19px;
+      line-height: 1.25;
+      text-align: center;
+      user-select: none;
+    }
+
+    .envelope-pocket {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .envelope-pocket::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-left: 135px solid #ea7193;
+      border-right: 135px solid #ea7193;
+      border-top: 85px solid transparent;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 135px solid transparent;
+      border-right: 135px solid transparent;
+      border-top: 92px solid #bd4163;
+      transform-origin: top;
+      transition: transform 0.5s ease;
+      z-index: 4;
+    }
+
+    .envelope-container.open .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+
+    .tap-hint {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 13px;
+      color: #a8234a;
+      margin-top: 10px;
+      animation: pulseText 1.5s infinite alternate;
+    }
+
+    @keyframes pulseText {
+      0% { opacity: 0.6; transform: scale(0.98); }
+      100% { opacity: 1; transform: scale(1.02); }
+    }
+
+    /* FULLSCREEN POPUP OVERLAY (OUTSIDE ENVELOPE HIERARCHY) */
+    .letter-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(60, 15, 30, 0.65);
+      backdrop-filter: blur(6px);
+      z-index: 998;
+    }
+
+    .letter-popup-card {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.7);
+      width: 90vw;
+      max-width: 400px;
+      max-height: 80vh;
+      background: #ffffff;
+      border: 3.5px solid #ff758c;
+      border-radius: 24px;
+      padding: 24px 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+      overflow-y: auto;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Active open animation */
+    body.letter-open .letter-backdrop {
+      display: block;
+      animation: fadeIn 0.3s forwards;
+    }
+
+    body.letter-open .letter-popup-card {
+      display: block;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .ending-box {
+      background: linear-gradient(135deg, #fff0f5 0%, #ffe3ec 100%);
+      border: 2.5px dashed #ff8da1;
+      border-radius: 24px;
+      padding: 22px 16px;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 20px rgba(189, 42, 87, 0.12);
+    }
+
+    .ending-stickers {
+      font-size: 38px;
+      margin-bottom: 8px;
+      animation: pulseEnding 1.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseEnding {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.12); }
+    }
+
+    [contenteditable="true"] {
+      border: 1.5px dashed #e0527f;
+      border-radius: 8px;
+      padding: 3px 6px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .kiss {
+      position: fixed;
+      font-size: 32px;
+      animation: floatUpKiss 1.8s forwards ease-out;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    @keyframes floatUpKiss {
+      0% { opacity: 1; transform: translateY(0) scale(0.6); }
+      100% { opacity: 0; transform: translateY(-180px) scale(1.6); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="bg-container"></div>
+
+  <div class="container">
+
+    <!-- Step 1: Clean Cover Page -->
+    <div class="step active" id="step-1">
+      <div class="sticker-badge">✨ MY FAVORITE HUMAN ✨</div>
+      <div style="font-size: 60px; margin-bottom: 12px;">🥰💖</div>
+      <h1 id="edit-title" contenteditable="true">Happy Boyfriend Day, Baby!</h1>
+      <p id="edit-subtitle" contenteditable="true">I made a sweet interactive gift just for you... Tap below to start! 💋</p>
+      <div class="nav-buttons">
+        <button class="btn" onclick="nextStep(2)">Open My Heart 💖</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Do You Love Me? -->
+    <div class="step" id="step-2">
+      <div style="font-size: 55px; margin-bottom: 8px;">🐧💋</div>
+      <h2>Do you love me as much as I love you? 🥺</h2>
+      <div class="love-btn-container" id="love-btn-area">
+        <button class="btn" onclick="loveYes()">Yes, forever! 💖</button>
+        <button class="btn" id="no-btn" onmouseover="runAwayNo()" onclick="runAwayNo()">No 😜</button>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(1)">⬅️ Back</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Interactive This or That -->
+    <div class="step" id="step-3">
+      <h2>This or That? ✨</h2>
+      <p>Tap options to reveal why I love them! 💕</p>
+      <div class="option-grid">
+        <div class="option-card" onclick="selectOption(this)">
+          <div class="title">Warm Cuddles 🤗</div>
+          <div class="desc" contenteditable="true">Because feeling your arms around me is my safest place in the world.</div>
+        </div>
+        <div class="option-card" onclick="selectOption(this)">
+          <div class="title">Sweet Kisses 💋</div>
+          <div class="desc" contenteditable="true">Because your smooches instantly make any bad day ten times better!</div>
+        </div>
+        <div class="option-card" onclick="selectOption(this)">
+          <div class="title">Cute Texts 📱</div>
+          <div class="desc" contenteditable="true">Because getting a notification from you makes my heart do a happy flip.</div>
+        </div>
+        <div class="option-card" onclick="selectOption(this)">
+          <div class="title">Late Calls 📞</div>
+          <div class="desc" contenteditable="true">Because hearing your sleepy voice at night is my favorite way to end the day.</div>
+        </div>
+        <div class="option-card" onclick="selectOption(this)">
+          <div class="title">Movie Nights 🎬</div>
+          <div class="desc" contenteditable="true">Because sharing popcorn and snuggling under blankets with you is perfection.</div>
+        </div>
+        <div class="option-card" onclick="selectOption(this)">
+          <div class="title">Late Drives 🚗</div>
+          <div class="desc" contenteditable="true">Because quiet road trips together with good music feel pure and magical.</div>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(2)">⬅️ Back</button>
+        <button class="btn" onclick="nextStep(4)">Love Catcher 🧺</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Heart Catcher Game -->
+    <div class="step" id="step-4">
+      <h2>Catch My Hearts 🧺💖</h2>
+      <p>Move the basket to catch 5 falling hearts!</p>
+      <div id="catcher-game">
+        <div id="basket">🧺</div>
+      </div>
+      <p id="catcher-score" style="font-family: 'Fredoka', sans-serif; color: #bd2a57; font-size: 18px;">Hearts Caught: 0 / 5</p>
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(3)">⬅️ Back</button>
+        <button class="btn" id="catcher-next-btn" onclick="nextStep(5)">Tic-Tac-Toe 🎯</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Tic-Tac-Toe -->
+    <div class="step" id="step-5">
+      <h2>Win My Heart 🎯</h2>
+      <p>You play as ❤️ (I'm ⭐)</p>
+      <div class="board" id="board">
+        <div class="cell" onclick="playerMove(this, 0)"></div>
+        <div class="cell" onclick="playerMove(this, 1)"></div>
+        <div class="cell" onclick="playerMove(this, 2)"></div>
+        <div class="cell" onclick="playerMove(this, 3)"></div>
+        <div class="cell" onclick="playerMove(this, 4)"></div>
+        <div class="cell" onclick="playerMove(this, 5)"></div>
+        <div class="cell" onclick="playerMove(this, 6)"></div>
+        <div class="cell" onclick="playerMove(this, 7)"></div>
+        <div class="cell" onclick="playerMove(this, 8)"></div>
+      </div>
+      <p id="game-status" style="font-weight: bold; color: #bd2a57; min-height: 24px; font-size: 18px;"></p>
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(4)">⬅️ Back</button>
+        <button class="btn" onclick="nextStep(6)">Promises 💌</button>
+      </div>
+    </div>
+
+    <!-- Step 6: Promises Checklist -->
+    <div class="step" id="step-6">
+      <div class="sticker-badge">SPECIAL PROMISES 🎀</div>
+      <h2>Promises For You 💌</h2>
+      <p>Check each box to seal the promise!</p>
+      <div class="checklist">
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Unlimited warm hugs & kisses 🧸</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Always be your #1 cheerleader 🎧</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Never stay mad at you for long 🥺</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Support all your big dreams 🌟</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Choose you, every single day 💖</span></label>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(5)">⬅️ Back</button>
+        <button class="btn" onclick="nextStep(7)">Why I Love You 💖</button>
+      </div>
+    </div>
+
+    <!-- Step 7: Why I Love You -->
+    <div class="step" id="step-7">
+      <h2>Why I Love You 💖</h2>
+      <div id="reason-card-container"></div>
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(6)">⬅️ Back</button>
+        <button class="btn" id="reason-btn" onclick="nextReason()">Next Reason 💌</button>
+      </div>
+    </div>
+
+    <!-- Step 8: Hug & Kiss Booth -->
+    <div class="step" id="step-8">
+      <div class="sticker-badge">24/7 LOVE BOOTH 💋</div>
+      <h2>Hug & Kiss Station 🧸</h2>
+      <p>Tap the buttons below to fill up the Cuteness Meter!</p>
+      
+      <div class="booth-card">
+        <div style="font-size: 50px; margin-bottom: 5px;">🐻‍❄️💋🐻</div>
+        <div class="love-meter-bar">
+          <div class="love-meter-fill" id="love-fill"></div>
+        </div>
+        <p id="booth-status" style="font-family:'Fredoka', sans-serif; color:#a8234a; font-size: 16px; margin-bottom:0;">Love Level: 0%</p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="addBoothLove('hug')">Give Warm Hug 🤗</button>
+        <button class="btn" onclick="addBoothLove('kiss')">Send Smooch 💋</button>
+      </div>
+
+      <div class="nav-buttons" style="margin-top: 15px;">
+        <button class="btn btn-back" onclick="nextStep(7)">⬅️ Back</button>
+        <button class="btn" onclick="nextStep(9)">Read Love Letter ✉️</button>
+      </div>
+    </div>
+
+    <!-- Step 9: Envelope & Pop-Out Love Letter -->
+    <div class="step" id="step-9">
+      <h2>A Letter From My Heart 💌</h2>
+      <p>Tap the envelope to open your letter!</p>
+      
+      <div class="envelope-section">
+        <div class="envelope-container" id="myEnvelope" onclick="openLetter()">
+          <div class="envelope-back"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-paper-preview">
+            <div class="letter-preview-text">💌 Tap to open love letter...</div>
+          </div>
+          <div class="envelope-pocket"></div>
+        </div>
+        <div class="tap-hint">✨ Tap envelope to open letter ✨</div>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(8)">⬅️ Back</button>
+        <button class="btn" onclick="sendKiss()">Send Kisses 💋</button>
+        <button class="btn" onclick="nextStep(10)">Final Hug 🤗</button>
+      </div>
+    </div>
+
+    <!-- Step 10: Ending Section -->
+    <div class="step" id="step-10">
+      <div class="ending-box">
+        <div class="ending-stickers">💖🧸🌸🎀✨</div>
+        <h2 style="font-size: 26px;">You Have My Whole Heart Forever! 💕</h2>
+        <p style="font-size: 22px; color: #a8234a;">
+          Thank you for being the sweetest, kindest, and most amazing boyfriend ever! 💋<br/>
+          Sending you big warm hugs and 1000 kisses!
+        </p>
+        <div style="font-size: 35px;">🐻‍❄️💖🐻</div>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="nextStep(9)">⬅️ Back to Letter</button>
+        <button class="btn" onclick="sendKiss()">Blow Kisses 💋</button>
+        <button class="btn btn-secondary" onclick="shareWebsite()">🔗 Share / Copy Link</button>
+        <button class="btn btn-back" onclick="nextStep(1)" style="width: 100%; margin-top: 5px;">🔄 Replay From Start</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- POPUP OVERLAY (REMOVED FROM INSIDE ENVELOPE) -->
+  <div class="letter-backdrop" onclick="closeLetter()"></div>
+  <div class="letter-popup-card" id="popupCard">
+    <p id="edit-letter" contenteditable="true" style="color:#222; font-family: 'Caveat', cursive; font-size: 22px; line-height: 1.45; text-align: left;">
+      Happy Boyfriend’s Day to my favourite person, my safe place, and the one who makes my heart so happy. 🥹❤️ I honestly don’t know how I got so lucky to have you. Even though we’re miles apart, you still manage to make me feel loved, cared for, and close to you. I love all our little conversations, our silly moments, our memories, and even the stupid little fights because somehow they’ve all become a part of our story. Thank you for being patient with me, for understanding my emotional side, and for staying beside me through everything. I may not be able to hug you whenever I want, but please know that my heart is always right there with you. I love you more than I can put into words, and I hope I get to celebrate many, many more Boyfriend’s Days with you. 🫶🏻💗 Happy Boyfriend’s Day, my love. You’ll always be my favourite boy. 🥹❤️
+    </p>
+    <div style="text-align: center; margin-top: 20px;">
+      <button class="btn btn-secondary" onclick="closeLetter()" style="font-size: 14px; padding: 8px 20px;">Tap to put back 💌</button>
+    </div>
+  </div>
+
+  <script>
+    const bgContainer = document.getElementById('bg-container');
+    const emojiStickers = ['💖', '💌', '💋', '🧸', '🌸', '🎀', '⭐', '💕', '✨'];
+
+    for (let i = 0; i < 22; i++) {
+      const item = document.createElement('div');
+      item.className = 'bg-item';
+      item.innerText = emojiStickers[Math.floor(Math.random() * emojiStickers.length)];
+      item.style.left = Math.random() * 92 + 'vw';
+      item.style.animationDelay = (Math.random() * 8) + 's';
+      item.style.animationDuration = (8 + Math.random() * 6) + 's';
+      bgContainer.appendChild(item);
+    }
+
+    async function shareWebsite() {
+      if (window.location.protocol === 'file:') {
+        alert("✨ Note: Hosting this on GitHub Pages, Netlify, or CodePen will give you a live link to share directly!");
+        return;
+      }
+
+      const data = {
+        title: document.getElementById('edit-title').innerText,
+        sub: document.getElementById('edit-subtitle').innerText,
+        letter: document.getElementById('edit-letter').innerText
+      };
+      
+      const encoded = encodeURIComponent(JSON.stringify(data));
+      const shareURL = window.location.origin + window.location.pathname + '?gift=' + encoded;
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: 'Happy Boyfriend Day 💕',
+            text: 'I made something special for you! 💖',
+            url: shareURL
+          });
+          return;
+        } catch (err) {}
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareURL).then(() => {
+          alert("✨ Link copied to clipboard! Send it to your boyfriend 💖");
+        }).catch(() => {
+          prompt("Copy your personalized link:", shareURL);
+        });
+      } else {
+        prompt("Copy your personalized link:", shareURL);
+      }
+    }
+
+    function loadStateFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('gift')) {
+        try {
+          const raw = params.get('gift');
+          const decoded = JSON.parse(decodeURIComponent(raw));
+          if(decoded.title) document.getElementById('edit-title').innerText = decoded.title;
+          if(decoded.sub) document.getElementById('edit-subtitle').innerText = decoded.sub;
+          if(decoded.letter) document.getElementById('edit-letter').innerText = decoded.letter;
+        } catch(e) {
+          console.error("Could not load custom data", e);
+        }
+      }
+    }
+    loadStateFromURL();
+
+    function nextStep(stepNumber) {
+      document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+      document.getElementById('step-' + stepNumber).classList.add('active');
+      if(stepNumber === 4) startCatcherGame();
+      if(stepNumber === 7) renderReason();
+      if(stepNumber === 10) sendKiss();
+    }
+
+    function runAwayNo() {
+      const noBtn = document.getElementById('no-btn');
+      const container = document.getElementById('love-btn-area');
+      const maxX = container.clientWidth - noBtn.clientWidth;
+      const maxY = 80;
+
+      const randomX = Math.floor(Math.random() * (maxX + 80)) - 40;
+      const randomY = Math.floor(Math.random() * maxY) - 40;
+
+      noBtn.style.left = randomX + 'px';
+      noBtn.style.top = randomY + 'px';
+    }
+
+    function loveYes() {
+      sendKiss();
+      nextStep(3);
+    }
+
+    function selectOption(element) {
+      element.classList.toggle('selected');
+    }
+
+    let catcherScore = 0;
+    let catcherInterval;
+
+    function startCatcherGame() {
+      const gameArea = document.getElementById('catcher-game');
+      const basket = document.getElementById('basket');
+      catcherScore = 0;
+      document.getElementById('catcher-score').innerText = "Hearts Caught: 0 / 5";
+
+      function moveBasket(e) {
+        const rect = gameArea.getBoundingClientRect();
+        let clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        let x = clientX - rect.left - 20;
+        if(x < 0) x = 0;
+        if(x > rect.width - 40) x = rect.width - 40;
+        basket.style.left = x + 'px';
+      }
+
+      gameArea.addEventListener('mousemove', moveBasket);
+      gameArea.addEventListener('touchmove', moveBasket);
+
+      clearInterval(catcherInterval);
+      catcherInterval = setInterval(() => {
+        if(catcherScore >= 5) {
+          clearInterval(catcherInterval);
+          return;
+        }
+        createFallingHeart();
+      }, 850);
+    }
+
+    function createFallingHeart() {
+      const gameArea = document.getElementById('catcher-game');
+      const item = document.createElement('div');
+      item.className = 'falling-item';
+      
+      const pureHearts = ['💖', '❤️', '💕', '💗', '💓', '❣️'];
+      item.innerText = pureHearts[Math.floor(Math.random() * pureHearts.length)];
+      item.style.left = Math.random() * (gameArea.clientWidth - 30) + 'px';
+      gameArea.appendChild(item);
+
+      let top = 0;
+      const fall = setInterval(() => {
+        top += 3;
+        item.style.top = top + 'px';
+
+        const basket = document.getElementById('basket');
+        const bRect = basket.getBoundingClientRect();
+        const iRect = item.getBoundingClientRect();
+
+        if (
+          iRect.bottom >= bRect.top &&
+          iRect.top <= bRect.bottom &&
+          iRect.right >= bRect.left &&
+          iRect.left <= bRect.right
+        ) {
+          catcherScore++;
+          document.getElementById('catcher-score').innerText = `Hearts Caught: ${catcherScore} / 5`;
+          item.remove();
+          clearInterval(fall);
+
+          if (catcherScore >= 5) {
+            document.getElementById('catcher-score').innerText = "You caught all my love! 🥰💖";
+            sendKiss();
+          }
+        }
+
+        if (top > 200) {
+          item.remove();
+          clearInterval(fall);
+        }
+      }, 20);
+    }
+
+    let boardState = ['', '', '', '', '', '', '', '', ''];
+    let gameOver = false;
+
+    function playerMove(cell, index) {
+      if (boardState[index] !== '' || gameOver) return;
+      boardState[index] = '❤️';
+      cell.innerText = '❤️';
+
+      if (checkWin('❤️')) {
+        document.getElementById('game-status').innerText = "Yay! You won my heart! 🥰💖";
+        gameOver = true;
+        return;
+      }
+      if (!boardState.includes('')) {
+        document.getElementById('game-status').innerText = "It's a tie! We both win! 💞";
+        gameOver = true;
+        return;
+      }
+      setTimeout(computerMove, 300);
+    }
+
+    function computerMove() {
+      if (gameOver) return;
+      let emptyIndices = boardState.map((val, idx) => val === '' ? idx : null).filter(val => val !== null);
+      if (emptyIndices.length === 0) return;
+
+      let randomIndex = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
+      boardState[randomIndex] = '⭐';
+      document.querySelectorAll('.cell')[randomIndex].innerText = '⭐';
+
+      if (checkWin('⭐')) {
+        document.getElementById('game-status').innerText = "I captured your heart! ⭐💕";
+        gameOver = true;
+      }
+    }
+
+    function checkWin(player) {
+      const winPatterns = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+      return winPatterns.some(pattern => pattern.every(index => boardState[index] === player));
+    }
+
+    function togglePromise(label) {
+      const checkbox = label.querySelector('input[type="checkbox"]');
+      if (checkbox.checked) {
+        label.classList.add('completed');
+      } else {
+        label.classList.remove('completed');
+      }
+    }
+
+    const reasonsData = [
+      { text: "Because you make even ordinary days feel so extra special ✨", sticker: "🌸🎀", bg: "linear-gradient(135deg, #ffe0e9 0%, #fff0f5 100%)" },
+      { text: "Because you have the sweetest, most comforting smile in the whole world 😊", sticker: "🧸💖", bg: "linear-gradient(135deg, #fff3b0 0%, #ffe0e9 100%)" },
+      { text: "Because I feel totally safe, warm, and cherished whenever I'm with you 🤍", sticker: "☁️🕊️", bg: "linear-gradient(135deg, #e0f2fe 0%, #ffe0e9 100%)" },
+      { text: "Because seeing your name pop up on my phone brightens my entire day 📱💖", sticker: "💌💋", bg: "linear-gradient(135deg, #fbcfe8 0%, #ffe0e9 100%)" },
+      { text: "Simply because you are YOU, and you are my whole favorite world! 🥰", sticker: "👑❤️", bg: "linear-gradient(135deg, #fef08a 0%, #fbcfe8 100%)" }
+    ];
+
+    let currentReasonIndex = 0;
+
+    function renderReason() {
+      const container = document.getElementById('reason-card-container');
+      const reasonBtn = document.getElementById('reason-btn');
+      const data = reasonsData[currentReasonIndex];
+
+      container.innerHTML = `
+        <div class="reason-card" style="background: ${data.bg}">
+          <div class="reason-sticker">${data.sticker}</div>
+          <p style="font-family: 'Caveat', cursive; font-weight: bold; color: #a8234a; font-size: 24px; margin: 0; line-height: 1.3;">
+            "${data.text}"
+          </p>
+        </div>
+      `;
+
+      if (currentReasonIndex === reasonsData.length - 1) {
+        reasonBtn.innerText = "Love Booth 💋";
+      } else {
+        reasonBtn.innerText = "Next Reason 💌";
+      }
+    }
+
+    function nextReason() {
+      if (currentReasonIndex < reasonsData.length - 1) {
+        currentReasonIndex++;
+        renderReason();
+      } else {
+        nextStep(8);
+      }
+    }
+
+    let loveLevel = 0;
+    function addBoothLove(type) {
+      if (loveLevel < 100) {
+        loveLevel += 10;
+        document.getElementById('love-fill').style.width = loveLevel + '%';
+        
+        if (loveLevel < 100) {
+          document.getElementById('booth-status').innerText = `Love Level: ${loveLevel}% 💖`;
+        } else {
+          document.getElementById('booth-status').innerText = "MAX LOVE! You are officially my favorite boy! 🥰💖";
+        }
+      }
+      sendKiss();
+    }
+
+    function openLetter() {
+      document.getElementById('myEnvelope').classList.add('open');
+      setTimeout(() => {
+        document.body.classList.add('letter-open');
+        sendKiss();
+      }, 250);
+    }
+
+    function closeLetter() {
+      document.body.classList.remove('letter-open');
+      setTimeout(() => {
+        document.getElementById('myEnvelope').classList.remove('open');
+      }, 200);
+    }
+
+    function sendKiss() {
+      for (let i = 0; i < 12; i++) {
+        const kiss = document.createElement('div');
+        kiss.className = 'kiss';
+        kiss.innerText = Math.random() > 0.5 ? '💋' : '💖';
+        kiss.style.left = (Math.random() * 80 + 10) + 'vw';
+        kiss.style.bottom = '80px';
+        document.body.appendChild(kiss);
+        setTimeout(() => kiss.remove(), 1800);
+      }
+    }
+  </script>
+</body>
+</html>
