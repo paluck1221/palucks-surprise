@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -487,7 +488,7 @@
       100% { opacity: 1; transform: scale(1.02); }
     }
 
-    /* FULLSCREEN POPUP OVERLAY (OUTSIDE ENVELOPE HIERARCHY) */
+    /* FULLSCREEN POPUP OVERLAY */
     .letter-backdrop {
       display: none;
       position: fixed;
@@ -520,7 +521,6 @@
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    /* Active open animation */
     body.letter-open .letter-backdrop {
       display: block;
       animation: fadeIn 0.3s forwards;
@@ -557,14 +557,6 @@
       100% { transform: scale(1.12); }
     }
 
-    [contenteditable="true"] {
-      border: 1.5px dashed #e0527f;
-      border-radius: 8px;
-      padding: 3px 6px;
-      outline: none;
-      background: rgba(255, 255, 255, 0.6);
-    }
-
     .kiss {
       position: fixed;
       font-size: 32px;
@@ -589,8 +581,8 @@
     <div class="step active" id="step-1">
       <div class="sticker-badge">✨ MY FAVORITE HUMAN ✨</div>
       <div style="font-size: 60px; margin-bottom: 12px;">🥰💖</div>
-      <h1 id="edit-title" contenteditable="true">Happy Boyfriend Day, Baby!</h1>
-      <p id="edit-subtitle" contenteditable="true">I made a sweet interactive gift just for you... Tap below to start! 💋</p>
+      <h1 id="edit-title">Happy Boyfriend Day, Baby!</h1>
+      <p id="edit-subtitle">I made a sweet interactive gift just for you... Tap below to start! 💋</p>
       <div class="nav-buttons">
         <button class="btn" onclick="nextStep(2)">Open My Heart 💖</button>
       </div>
@@ -616,27 +608,27 @@
       <div class="option-grid">
         <div class="option-card" onclick="selectOption(this)">
           <div class="title">Warm Cuddles 🤗</div>
-          <div class="desc" contenteditable="true">Because feeling your arms around me is my safest place in the world.</div>
+          <div class="desc">Because feeling your arms around me is my safest place in the world.</div>
         </div>
         <div class="option-card" onclick="selectOption(this)">
           <div class="title">Sweet Kisses 💋</div>
-          <div class="desc" contenteditable="true">Because your smooches instantly make any bad day ten times better!</div>
+          <div class="desc">Because your smooches instantly make any bad day ten times better!</div>
         </div>
         <div class="option-card" onclick="selectOption(this)">
           <div class="title">Cute Texts 📱</div>
-          <div class="desc" contenteditable="true">Because getting a notification from you makes my heart do a happy flip.</div>
+          <div class="desc">Because getting a notification from you makes my heart do a happy flip.</div>
         </div>
         <div class="option-card" onclick="selectOption(this)">
           <div class="title">Late Calls 📞</div>
-          <div class="desc" contenteditable="true">Because hearing your sleepy voice at night is my favorite way to end the day.</div>
+          <div class="desc">Because hearing your sleepy voice at night is my favorite way to end the day.</div>
         </div>
         <div class="option-card" onclick="selectOption(this)">
           <div class="title">Movie Nights 🎬</div>
-          <div class="desc" contenteditable="true">Because sharing popcorn and snuggling under blankets with you is perfection.</div>
+          <div class="desc">Because sharing popcorn and snuggling under blankets with you is perfection.</div>
         </div>
         <div class="option-card" onclick="selectOption(this)">
           <div class="title">Late Drives 🚗</div>
-          <div class="desc" contenteditable="true">Because quiet road trips together with good music feel pure and magical.</div>
+          <div class="desc">Because quiet road trips together with good music feel pure and magical.</div>
         </div>
       </div>
       <div class="nav-buttons">
@@ -687,11 +679,11 @@
       <h2>Promises For You 💌</h2>
       <p>Check each box to seal the promise!</p>
       <div class="checklist">
-        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Unlimited warm hugs & kisses 🧸</span></label>
-        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Always be your #1 cheerleader 🎧</span></label>
-        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Never stay mad at you for long 🥺</span></label>
-        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Support all your big dreams 🌟</span></label>
-        <label onclick="togglePromise(this)"><input type="checkbox" /> <span contenteditable="true">Choose you, every single day 💖</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span>Unlimited warm hugs & kisses 🧸</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span>Always be your #1 cheerleader 🎧</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span>Never stay mad at you for long 🥺</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span>Support all your big dreams 🌟</span></label>
+        <label onclick="togglePromise(this)"><input type="checkbox" /> <span>Choose you, every single day 💖</span></label>
       </div>
       <div class="nav-buttons">
         <button class="btn btn-back" onclick="nextStep(5)">⬅️ Back</button>
@@ -773,17 +765,16 @@
       <div class="nav-buttons">
         <button class="btn btn-back" onclick="nextStep(9)">⬅️ Back to Letter</button>
         <button class="btn" onclick="sendKiss()">Blow Kisses 💋</button>
-        <button class="btn btn-secondary" onclick="shareWebsite()">🔗 Share / Copy Link</button>
         <button class="btn btn-back" onclick="nextStep(1)" style="width: 100%; margin-top: 5px;">🔄 Replay From Start</button>
       </div>
     </div>
 
   </div>
 
-  <!-- POPUP OVERLAY (REMOVED FROM INSIDE ENVELOPE) -->
+  <!-- POPUP OVERLAY -->
   <div class="letter-backdrop" onclick="closeLetter()"></div>
   <div class="letter-popup-card" id="popupCard">
-    <p id="edit-letter" contenteditable="true" style="color:#222; font-family: 'Caveat', cursive; font-size: 22px; line-height: 1.45; text-align: left;">
+    <p id="edit-letter" style="color:#222; font-family: 'Caveat', cursive; font-size: 22px; line-height: 1.45; text-align: left;">
       Happy Boyfriend’s Day to my favourite person, my safe place, and the one who makes my heart so happy. 🥹❤️ I honestly don’t know how I got so lucky to have you. Even though we’re miles apart, you still manage to make me feel loved, cared for, and close to you. I love all our little conversations, our silly moments, our memories, and even the stupid little fights because somehow they’ve all become a part of our story. Thank you for being patient with me, for understanding my emotional side, and for staying beside me through everything. I may not be able to hug you whenever I want, but please know that my heart is always right there with you. I love you more than I can put into words, and I hope I get to celebrate many, many more Boyfriend’s Days with you. 🫶🏻💗 Happy Boyfriend’s Day, my love. You’ll always be my favourite boy. 🥹❤️
     </p>
     <div style="text-align: center; margin-top: 20px;">
@@ -804,59 +795,6 @@
       item.style.animationDuration = (8 + Math.random() * 6) + 's';
       bgContainer.appendChild(item);
     }
-
-    async function shareWebsite() {
-      if (window.location.protocol === 'file:') {
-        alert("✨ Note: Hosting this on GitHub Pages, Netlify, or CodePen will give you a live link to share directly!");
-        return;
-      }
-
-      const data = {
-        title: document.getElementById('edit-title').innerText,
-        sub: document.getElementById('edit-subtitle').innerText,
-        letter: document.getElementById('edit-letter').innerText
-      };
-      
-      const encoded = encodeURIComponent(JSON.stringify(data));
-      const shareURL = window.location.origin + window.location.pathname + '?gift=' + encoded;
-
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: 'Happy Boyfriend Day 💕',
-            text: 'I made something special for you! 💖',
-            url: shareURL
-          });
-          return;
-        } catch (err) {}
-      }
-
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(shareURL).then(() => {
-          alert("✨ Link copied to clipboard! Send it to your boyfriend 💖");
-        }).catch(() => {
-          prompt("Copy your personalized link:", shareURL);
-        });
-      } else {
-        prompt("Copy your personalized link:", shareURL);
-      }
-    }
-
-    function loadStateFromURL() {
-      const params = new URLSearchParams(window.location.search);
-      if (params.has('gift')) {
-        try {
-          const raw = params.get('gift');
-          const decoded = JSON.parse(decodeURIComponent(raw));
-          if(decoded.title) document.getElementById('edit-title').innerText = decoded.title;
-          if(decoded.sub) document.getElementById('edit-subtitle').innerText = decoded.sub;
-          if(decoded.letter) document.getElementById('edit-letter').innerText = decoded.letter;
-        } catch(e) {
-          console.error("Could not load custom data", e);
-        }
-      }
-    }
-    loadStateFromURL();
 
     function nextStep(stepNumber) {
       document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
@@ -1096,3 +1034,4 @@
   </script>
 </body>
 </html>
+ 
